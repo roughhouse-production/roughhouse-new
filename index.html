@@ -53,7 +53,7 @@
 						<div class="inner">
 							<header>
 								<h1>We are Rough House</h1>
-								<p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+								<!-- <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p> -->
 							</header>
 							<section class="tiles">
 								<article class="style1">
@@ -61,7 +61,7 @@
 										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<a href="generic.html">
-										<h2>Magna</h2>
+										<h2>We are giant</h2>
 										<div class="content">
 											<p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p>
 										</div>
@@ -145,12 +145,131 @@
 
 			</div>
 
+
+			<!-- first vid modal -->
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal1">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content bmd-modalContent">
+				<div class="modal-body">
+			        <div class="close-button">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        </div>
+		            <div class="embed-responsive embed-responsive-16by9">
+			            <iframe class="embed-responsive-item" frameborder="0"></iframe>
+			        </div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+
+
+<!-- second vid modal -->
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal2">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content bmd-modalContent">
+				<div class="modal-body">
+			        <div class="close-button">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        </div>
+		            <div class="embed-responsive embed-responsive-16by9">
+			            <iframe class="embed-responsive-item" frameborder="0"></iframe>
+			        </div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+<!-- third vid modal -->
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal3">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content bmd-modalContent">
+				<div class="modal-body">
+			        <div class="close-button">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        </div>
+		            <div class="embed-responsive embed-responsive-16by9">
+			            <iframe class="embed-responsive-item" frameborder="0"></iframe>
+			        </div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
+<!-- fourth vid modal -->
+	<div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true" id="myModal4">
+		<div class="modal-dialog modal-xl">
+			<div class="modal-content bmd-modalContent">
+				<div class="modal-body">
+			        <div class="close-button">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+			        </div>
+		            <div class="embed-responsive embed-responsive-16by9">
+			            <iframe class="embed-responsive-item" frameborder="0"></iframe>
+			        </div>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->
+	</div><!-- /.modal -->
+
 		<!-- Scripts -->
 			<script src="assets/js/jquery.min.js"></script>
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 			<script src="assets/js/main.js"></script>
+
+			<script>
+      	(function($) {
+
+      	    $.fn.bmdIframe = function( options ) {
+      	        var self = this;
+      	        var settings = $.extend({
+      	            classBtn: '.bmd-modalButton',
+      	            defaultW: 960,
+      	            defaultH: 500
+      	        }, options );
+
+      	        $(settings.classBtn).on('click', function(e) {
+      	          var allowFullscreen = $(this).attr('data-bmdVideoFullscreen') || true;
+
+      	          var dataVideo = {
+      	            'src': $(this).attr('data-bmdSrc'),
+      	            'height': $(this).attr('data-bmdHeight') || settings.defaultH,
+      	            'width': $(this).attr('data-bmdWidth') || settings.defaultW
+      	          };
+
+      	          if ( allowFullscreen ) dataVideo.allowfullscreen = "";
+
+      	          // pulls data into the frame
+      	          $(self).find("iframe").attr(dataVideo);
+      	        });
+
+      	        // preventsvideo from playing after modal is closed
+
+      	        this.on('hidden.bs.modal', function(){
+      	          $(this).find('iframe').html("").attr("src", "");
+      	        });
+
+      	        return this;
+      	    };
+
+      	})(jQuery);
+
+      	jQuery(document).ready(function(){
+      	  jQuery("#myModal1").bmdIframe();
+      	});
+      	jQuery(document).ready(function(){
+      	  jQuery("#myModal2").bmdIframe();
+      	});
+      	jQuery(document).ready(function(){
+      	  jQuery("#myModal3").bmdIframe();
+      	});
+      	jQuery(document).ready(function(){
+      	  jQuery("#myModal4").bmdIframe();
+      	});
+
+      </script>
 
 	</body>
 </html>
