@@ -63,6 +63,12 @@
 
 /* Grid */
 
+	.grid-2-col {
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto;
+	}
+
 	.row {
 		border-bottom: solid 1px transparent;
 		-moz-box-sizing: border-box;
@@ -1628,8 +1634,8 @@
 	}
 
 	body {
-		background: #222222;
-		/* background-image doesn't work here */
+		background: url("../../images/Roughhouse-bg.jpg");
+		background-size: cover;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -1646,7 +1652,7 @@
 /* Type */
 
 	body, input, select, textarea {
-		color: #585858;
+		color: #ffffff;
 		font-family: "Source Sans Pro", Helvetica, sans-serif;
 		font-size: 16pt;
 		font-weight: 300;
@@ -2669,7 +2675,7 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+					/* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E"); */
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: 100% 100%;
@@ -2741,19 +2747,31 @@
 					}
 
 			.tiles article.style1 > .image:before {
-				background-color: #f2849e;
+				border: 4px solid red;
+		    background: url("../../images/Giants-Sizzle-Reel.png");
+		    background-size: cover;
+				/* background-color: #f2849e; */
 			}
 
 			.tiles article.style2 > .image:before {
-				background-color: #7ecaf6;
+				border: 4px solid red;
+		    background: url("../../images/Landing-ET-Macys-30.png");
+		    background-size: cover;
+				/* background-color: #7ecaf6; */
 			}
 
 			.tiles article.style3 > .image:before {
-				background-color: #7bd0c1;
+				border: 4px solid red;
+				background: url("../../images/Landing-Presidents_ Day.png");
+				background-size: cover;
+				/* background-color: #7bd0c1; */
 			}
 
 			.tiles article.style4 > .image:before {
-				background-color: #c75b9b;
+				border: 4px solid red;
+				background: url("../../images/Landing-ADMOG2.png");
+				background-size: cover;
+				/* background-color: #c75b9b; */
 			}
 
 			.tiles article.style5 > .image:before {
@@ -2941,7 +2959,7 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+					/* background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E"); */
 					background-position: center;
 					background-repeat: no-repeat;
 					background-size: 100% 100%;
@@ -3013,19 +3031,28 @@
 					}
 
 			.tiles2 article.style1 > .image:before {
-				background-color: #f2849e;
+				/* border: 4px solid red; */
+				background: url("../../images/Giants-Sizzle-Reel.png");
+				background-size: cover;
+				/* background-color: #f2849e; */
 			}
 
 			.tiles2 article.style2 > .image:before {
-				background-color: #7ecaf6;
+				background: url("../../images/Landing-ET-Macys-30.png");
+				background-size: cover;
+				/* background-color: #7ecaf6; */
 			}
 
 			.tiles2 article.style3 > .image:before {
-				background-color: #7bd0c1;
+				background: url("../../images/Landing-Presidents_ Day.png");
+				background-size: cover;
+				/* background-color: #7bd0c1; */
 			}
 
 			.tiles2 article.style4 > .image:before {
-				background-color: #c75b9b;
+				background: url("../../images/Landing-ADMOG2.png");
+				background-size: cover;
+				/* background-color: #c75b9b; */
 			}
 
 			.tiles2 article.style5 > .image:before {
@@ -3132,6 +3159,33 @@
 				}
 
 		}
+
+/* iFrames */
+
+.intrinsic-container {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+}
+
+/* 16x9 Aspect Ratio */
+.intrinsic-container-16x9 {
+  padding-bottom: 57%;
+}
+
+/* 4x3 Aspect Ratio */
+.intrinsic-container-4x3 {
+  padding-bottom: 75%;
+}
+
+.intrinsic-container iframe {
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100%;
+  height:100%;
+}
+
 
 /* Header */
 
