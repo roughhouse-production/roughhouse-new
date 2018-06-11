@@ -3032,31 +3032,31 @@
 
 			.tiles2 article.style1 > .image:before {
 				/* border: 4px solid red; */
-				background: url("../../images/Giants-Sizzle-Reel.png");
+				/* background: url("../../images/Giants-Sizzle-Reel.png"); */
 				background-size: cover;
 				/* background-color: #f2849e; */
 			}
 
 			.tiles2 article.style2 > .image:before {
-				background: url("../../images/Landing-ET-Macys-30.png");
+				/* background: url("../../images/Landing-ET-Macys-30.png"); */
 				background-size: cover;
 				/* background-color: #7ecaf6; */
 			}
 
 			.tiles2 article.style3 > .image:before {
-				background: url("../../images/Landing-Presidents_ Day.png");
+				/* background: url("../../images/Landing-Presidents_ Day.png"); */
 				background-size: cover;
 				/* background-color: #7bd0c1; */
 			}
 
 			.tiles2 article.style4 > .image:before {
-				background: url("../../images/Landing-ADMOG2.png");
+				/* background: url("../../images/Landing-ADMOG2.png"); */
 				background-size: cover;
 				/* background-color: #c75b9b; */
 			}
 
 			.tiles2 article.style5 > .image:before {
-				background-color: #ae85ca;
+				background-color: #ED2F2F/*#E33621*//*#ae85ca*/;
 			}
 
 			.tiles2 article.style6 > .image:before {
