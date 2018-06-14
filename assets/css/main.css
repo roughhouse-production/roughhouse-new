@@ -3736,6 +3736,14 @@
 	top: -80px;
 }
 
+@media screen and (max-width: 414px) {
+	.inner {
+    position: relative;
+    top: -35px;
+}
+
+}
+
 	#wrapper > * > .inner {
 		width: 100%;
 		max-width: 68em;
