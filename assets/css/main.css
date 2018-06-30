@@ -84,10 +84,13 @@
 	margin-bottom: 2em;
 }
 
-@media only screen and (max-width: 1154px){
+@media only screen and (max-width: 1300px){
 	.pull-up-30 {
 		position: relative;
     top: -30px;
+	}
+	#main > div > iframe {
+		width: 90vw;
 	}
 }
 
@@ -1665,7 +1668,8 @@
 
 	body {
 		background: url("../../images/Roughhouse-bg.jpg");
-		background-size: cover;
+		/* background-size: cover; */
+		background-size: 100vw;
 	}
 
 		body.is-loading *, body.is-loading *:before, body.is-loading *:after {
@@ -2656,8 +2660,8 @@
 			margin: 2.5em 0 0 2.5em;
 		}
 			.tiles article.style1, article.style4 {
-				width: calc(100% - 2.5em);
-		    height: 30em;
+				width: calc(100% - 2.5em) !important;
+		    height: 30em !important;
 			}
 
 			.tiles article > .image {
@@ -2870,8 +2874,9 @@
 			}
 
 				.tiles article {
-					width: calc(33.33333% - 1.25em);
+					width: calc(50% - 1.25em);
 					margin: 1.25em 0 0 1.25em;
+					height: 100%;
 				}
 
 		}
@@ -2916,7 +2921,7 @@
 			}
 
 				.tiles article {
-					width: 100%;
+					width: 100% !important;
 					margin: 1.25em 0 0 0;
 				}
 
