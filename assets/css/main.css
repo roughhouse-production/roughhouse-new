@@ -77,6 +77,9 @@
 .red {
 	color: red;
 }
+.grey{
+	color: #858585;
+}
 .play-icon {
     font-size: 2em !important;
     position: relative;
@@ -97,11 +100,16 @@
 	margin-bottom: 2em;
 }
 
+.pull-up-30 {
+	position: relative;
+	top: -30px;
+}
+.pull-up-60 {
+	position: relative;
+	top: -60px;
+}
+
 @media only screen and (max-width: 1300px){
-	.pull-up-30 {
-		position: relative;
-    top: -30px;
-	}
 	#main > div > iframe {
 		width: 90vw;
 	}
@@ -2725,9 +2733,10 @@
 					left: 0;
 					width: 100%;
 					height: 100%;
-					opacity: 1.0;
+					/* opacity: 1.0; */
 					z-index: 1;
-					opacity: 0.8;
+					opacity: 0.92;
+					filter: brightness(90%);
 				}
 
 				.tiles article > .image:after {
@@ -2818,7 +2827,7 @@
 					}
 
 			.tiles article.style1 > .image:before {
-				border: 4px solid red;
+				border: 2px solid red;
 		    background: url("../../images/Landing-2016Giants-Sizzle-Reel.png");
 		    background-size: cover;
 				/* background-color: #f2849e; */
@@ -2828,21 +2837,21 @@
 			}
 
 			.tiles article.style2 > .image:before {
-				border: 4px solid red;
+				border: 2px solid red;
 		    background: url("../../images/Landing-ET-Macys-30.png");
 		    background-size: cover;
 				/* background-color: #7ecaf6; */
 			}
 
 			.tiles article.style3 > .image:before {
-				border: 4px solid red;
+				border: 2px solid red;
 				background: url("../../images/Landing-Presidents_ Day.png");
 				background-size: cover;
 				/* background-color: #7bd0c1; */
 			}
 
 			.tiles article.style4 > .image:before {
-				border: 4px solid red;
+				border: 2px solid red;
 				background: url("../../images/Landing-ADMOG2.jpg");
 				background-size: cover;
 				/* background-color: #c75b9b; */
@@ -2878,7 +2887,7 @@
 			}
 
 		* + .tiles {
-			margin-top: 2em;
+			/* margin-top: 2em; */
 		}
 
 		body.is-loading .tiles article {
@@ -3602,9 +3611,9 @@
 
 /* Main */
 
-	#main {
+	/* #main {
 		padding: 0em 0 6em 0 ;
-	}
+	} */
 
 		@media screen and (max-width: 736px) {
 
