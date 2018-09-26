@@ -1,0 +1,202 @@
+// https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Mixins
+
+@mixin flexbox {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin inline-flex {
+  display: -webkit-inline-box;
+  display: -moz-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+@mixin flex-direction($value: row) {
+  @if $value == row-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: reverse;
+    -moz-box-orient: horizontal;
+  } @else if $value == column {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: normal;
+    -moz-box-orient: vertical;
+  } @else if $value == column-reverse {
+    -webkit-box-direction: reverse;
+    -webkit-box-orient: vertical;
+    -moz-box-direction: reverse;
+    -moz-box-orient: vertical;
+  } @else {
+    -webkit-box-direction: normal;
+    -webkit-box-orient: horizontal;
+    -moz-box-direction: normal;
+    -moz-box-orient: horizontal;
+  }
+  -webkit-flex-direction: $value;
+  -ms-flex-direction: $value;
+  flex-direction: $value;
+}
+
+@mixin justify-content($value: flex-start) {
+  @if $value == flex-start {
+    -webkit-box-pack: start;
+    -moz-box-pack: start;
+    -ms-flex-pack: start;
+  } @else if $value == flex-end {
+    -webkit-box-pack: end;
+    -moz-box-pack: end;
+    -ms-flex-pack: end;
+  } @else if $value == space-between {
+    -webkit-box-pack: justify;
+    -moz-box-pack: justify;
+    -ms-flex-pack: justify;
+  } @else if $value == space-around {
+    -ms-flex-pack: distribute;
+  } @else {
+    -webkit-box-pack: $value;
+    -moz-box-pack: $value;
+    -ms-flex-pack: $value;
+  }
+  -webkit-justify-content: $value;
+  justify-content: $value;
+}
+
+@mixin align-items($value: stretch) {
+  @if $value == flex-start {
+    -webkit-box-align: start;
+    -moz-box-align: start;
+    -ms-flex-align: start;
+  } @else if $value == flex-end {
+    -webkit-box-align: end;
+    -moz-box-align: end;
+    -ms-flex-align: end;
+  } @else {
+    -webkit-box-align: $value;
+    -moz-box-align: $value;
+    -ms-flex-align: $value;
+  }
+  -webkit-align-items: $value;
+  align-items: $value;
+}
+
+// ========================
+// Media Quary
+// ========================
+@mixin media($media) {
+  // If the size is up
+  @if ($media == "on-xxs") {
+    @media(min-width: 0px) and (max-width: 360px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-sx") {
+    @media(min-width: 361px) and (max-width: 480px) {
+			@content;
+		}
+	}
+
+	@if ($media == "on-sm") {
+    @media(min-width: 481px) and (max-width: 736px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-md") {
+    @media(min-width: 737px) and (max-width: 980px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-lg") {
+    @media(min-width: 981px) and (max-width: 1280px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-xl") {
+    @media(min-width: 1281px) and (max-width: 1680px) {
+			@content;
+		}
+	}
+
+  // If the size is up
+  @if ($media == "on-xxs-up") {
+    @media(min-width: 0px) {
+			@content;
+		}
+	}
+
+	@if ($media == "on-xs-up") {
+    @media(min-width: 361px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-sm-up") {
+    @media(min-width: 481px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-md-up") {
+    @media(min-width: 737px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-lg-up") {
+    @media(min-width: 981px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-xl-up") {
+    @media(min-width: 1681px) {
+			@content;
+		}
+	}
+
+	// If the size is Down
+	@if ($media == "on-xxs-down") {
+    @media(max-width: 360px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-xs-down") {
+    @media(max-width: 480px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-sm-down") {
+		@media(max-width: 736px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-md-down") {
+    @media(max-width: 980px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-lg-down") {
+    @media(max-width: 1280px) {
+			@content;
+		}
+	}
+
+  @if ($media == "on-xl-down") {
+		@media(max-width: 1680px) {
+			@content;
+		}
+	}
+}

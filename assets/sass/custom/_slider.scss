@@ -1,0 +1,133 @@
+.slick-slider {
+  margin-bottom: 30px;
+  transform: scale(1.05);
+
+  article {
+    position: relative;
+    height: 30em !important;
+    background: #ed2f2f;
+    border: 2px solid #ed2f2f;
+    border-radius: 4px;
+    overflow: hidden;
+    transform: scale(0.9);
+    transition: transform 0.5s ease;
+
+    @include media("on-xs-down") {
+      height: 332px !important;
+    }
+
+    picture {
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        min-width: 100%;
+        min-height: 100%;
+        opacity: 1;
+        transition: opacity 0.5s ease;
+
+        @include media("on-lg-down") {
+          min-width: 90%;
+          min-height: 90%;
+        }
+
+        @include media("on-md-down") {
+          top: 0;
+          left: 0;
+          witdh: auto;
+          height: 100%;
+          transform: translate(0, 0);
+        }
+
+      }
+    }
+
+    a {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      color: white;
+
+      @include flexbox;
+      @include flex-direction(column);
+      @include justify-content(center);
+      @include align-items(center);
+    }
+
+    a:visited, a:hover {
+      color: white !important;
+    }
+
+    &:hover {
+      transform: scale(1);
+      transition: transform 0.5s ease;
+
+      img {
+        opacity: 0.35;
+        transition: opacity 0.5s ease;
+      }
+    }
+  }
+
+  .slick-prev, .slick-next {
+    display: block;
+    position: absolute;
+    z-index: 10;
+    top: 50%;
+    transform: translate(0, -50%);
+    height: 90%;
+    width: 40px;
+    line-height: 0px;
+    font-size: 0px;
+    cursor: pointer;
+    background: transparent;
+    color: transparent;
+    padding: 0;
+    border: none;
+    outline: none;
+    box-shadow: none;
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 40px;
+      height: 40px;
+      color: white;
+      opacity: 0.25;
+      transition: opacity 0.5s ease;
+    }
+
+    &:hover, &:focus {
+      outline: none;
+      background: transparent;
+      color: transparent;
+
+      &:before {
+        opacity: 1;
+        transition: opacity 0.5s ease;
+      }
+    }
+  }
+
+  .slick-prev {
+    left: 0;
+
+    &:before {
+      background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M0%2C22L22%2C0l2.1%2C2.1L4.2%2C22l19.9%2C19.9L22%2C44L0%2C22L0%2C22L0%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") no-repeat center center;
+    }
+  }
+
+  .slick-next {
+    right: 0;
+
+    &:before {
+      background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") no-repeat center center;
+    }
+  }
+
+}

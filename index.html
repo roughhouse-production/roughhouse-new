@@ -10,7 +10,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/slick.css" />
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/style.css" />
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
 		<link href="https://fonts.googleapis.com/css?family=Montserrat:400,600" rel="stylesheet">
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
@@ -58,6 +60,43 @@
 								<h2 class="grey">Production experts</h>
 								<!-- <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p> -->
 							</header>
+
+							<section class="slick-slider">
+								<article>
+									<picture><img src="images/Landing-2016Giants-Sizzle-Reel.png" alt="We are giant" /></picture>
+									<a href="38-we-are-giant.html">
+										<h2>We are giant</h2>
+										<div class="content"></div>
+									</a>
+								</article>
+
+								<article>
+									<picture><img src="images/Landing-ET-Macys-30.png" alt="Color Correction" /></picture>
+									<a href="40-color-correction.html">
+										<h2>Color Correction</h2>
+										<div class="content"></div>
+									</a>
+								</article>
+
+								<article>
+									<picture><img src="images/Landing-Presidents_ Day.png" alt="Honda President's Day" /></picture>
+									<a href="27-honda-presidentsday.html">
+										<h2>Honda President's Day</h2>
+										<div class="content"></div>
+									</a>
+								</article>
+
+								<article>
+									<picture><img src="images/Landing-ADMOG2.jpg" alt="A Day Made of Glass" /></picture>
+									<a href="1-ADMOG2.html">
+										<h2>A Day Made of Glass</h2>
+										<div class="content"></div>
+									</a>
+								</article>
+							</section>
+
+
+							<!--
 							<section class="tiles">
 								<article class="style1" id="first-landing-tile">
 									<span class="image">
@@ -65,20 +104,17 @@
 									</span>
 									<a href="38-we-are-giant.html">
 										<h2>We are giant</h2>
-										<div class="content">
-											<!-- <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p> -->
-										</div>
+										<div class="content"></div>
 									</a>
 								</article>
+
 								<article class="style2">
 									<span class="image">
 										<img src="images/pic01.jpg" alt="" />
 									</span>
 									<a href="40-color-correction.html">
 										<h2>Color Correction</h2>
-										<div class="content">
-											<!-- <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p> -->
-										</div>
+										<div class="content"></div>
 									</a>
 								</article>
 								<article class="style3">
@@ -87,9 +123,7 @@
 									</span>
 									<a href="27-honda-presidentsday.html">
 										<h2>Honda President's Day</h2>
-										<div class="content">
-											<!-- <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p> -->
-										</div>
+										<div class="content"></div>
 									</a>
 								</article>
 								<article class="style4">
@@ -98,12 +132,12 @@
 									</span>
 									<a href="1-ADMOG2.html">
 										<h2>A Day Made of Glass</h2>
-										<div class="content">
-											<!-- <p>Sed nisl arcu euismod sit amet nisi lorem etiam dolor veroeros et feugiat.</p> -->
-										</div>
+										<div class="content"></div>
 									</a>
 								</article>
 							</section>
+							-->
+
 						</div>
 					</div>
 
@@ -198,7 +232,26 @@
 			<script src="assets/js/skel.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/slick.min.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script type="text/javascript">
+				$(document).ready(function(){
+		      $('.slick-slider').slick({
+		        adaptiveHeight: true,
+						autoplay: true,
+						autoplaySpeed: 4000,
+						responsive: [
+							{
+								breakpoint: 736,
+								settings: {
+									arrows: false,
+								}
+							}
+						]
+		      });
+		    });
+			</script>
 
 
 	</body>

@@ -1,0 +1,9 @@
+# Ignore IDE cache
+.vscode
+
+# Ignore mac hidden file ...
+.DS_Store
+*.DS_Store
+
+# Font end style cache
+.sass-cache
