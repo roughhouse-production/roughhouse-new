@@ -132,11 +132,7 @@
 }
 @media (max-width: 980px) {
   .slick-slider article picture img {
-    top: 0;
-    left: 0;
-    witdh: auto;
     height: 100%;
-    transform: translate(0, 0);
   }
 }
 .slick-slider article a {
@@ -229,6 +225,102 @@
 }
 .slick-slider .slick-next:before {
   background: url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D'http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg'%20viewBox%3D'0%200%2027%2044'%3E%3Cpath%20d%3D'M27%2C22L27%2C22L5%2C44l-2.1-2.1L22.8%2C22L2.9%2C2.1L5%2C0L27%2C22L27%2C22z'%20fill%3D'%23ffffff'%2F%3E%3C%2Fsvg%3E") no-repeat center center;
+}
+
+#header {
+  padding: 0;
+}
+@media (max-width: 736px) {
+  #header {
+    padding-bottom: 0.5em;
+  }
+}
+#header .logo {
+  margin-bottom: 0;
+}
+#header nav {
+  top: 1.4em;
+}
+#header nav ul li a {
+  background: none;
+}
+#header nav ul li a[href="#menu"]:after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 8px%3B stroke: %23FFFFFF%3B %7D%3C/style%3E%3Cline x1='0' y1='25' x2='100' y2='25' /%3E%3Cline x1='0' y1='50' x2='100' y2='50' /%3E%3Cline x1='0' y1='75' x2='100' y2='75' /%3E%3C/svg%3E");
+  opacity: 0.75;
+}
+#header nav ul li a[href="#menu"]:hover:after {
+  opacity: 0.25;
+}
+
+#menu > .close {
+  top: 1.3em;
+}
+
+#main {
+  min-height: calc(100vh - 280px);
+}
+#main > div > iframe {
+  width: 100% !important;
+}
+
+#footer {
+  padding-top: 3em;
+}
+#footer > .inner {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+.style5 .content {
+  border-top: 1px solid white;
+  margin-top: 0.2em;
+  padding-top: 0.5em;
+}
+.style5 p {
+  margin-bottom: 0.2em;
+}
+
+.inner {
+  top: 0 !important;
+}
+
+@media screen and (max-width: 735px) {
+  #wrapper > * > .inner {
+    top: 0px !important;
+  }
+}
+@media screen and (max-width: 736px) {
+  #main {
+    padding-bottom: 2em;
+  }
+
+  #wrapper > * > .inner {
+    padding: 2em 2.5em !important;
+  }
+}
+.tiles2 {
+  margin-bottom: 2em;
+}
+
+.grid-container {
+  width: 100%;
+  max-width: 68em;
+  margin: 0 auto 3em auto;
+  grid-column-gap: 0;
+  grid-row-gap: 2em;
+  grid-template-columns: auto auto auto auto;
+  align-items: center;
+  padding-right: 2em;
+  padding-left: 2em;
+}
+@media (max-width: 736px) {
+  .grid-container {
+    grid-template-columns: auto auto auto;
+  }
+}
+.grid-container .grid-item {
+  max-width: 50%;
+  max-height: 9vh;
 }
 
 /*# sourceMappingURL=style.css.map */
