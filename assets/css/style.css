@@ -451,4 +451,26 @@ body {
   padding-top: 94px;
 }
 
+* + .tiles2 {
+  margin-top: 0;
+}
+
+.inner > header.pull-up-60 {
+  top: -35px;
+}
+.inner > header p {
+  width: 80%;
+  margin: 10px auto 0 auto;
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Source Sans Pro", Helvetica, sans-serif !important;
+  font-weight: nomal;
+}
+
+#footer-2 ul.icons {
+  margin: -0.2em 0 2em -1em;
+}
+
 /*# sourceMappingURL=style.css.map */
