@@ -173,11 +173,16 @@
   }
 
   a, a:visited {
-    color: #fff;
+    color: #ccc;
+    letter-spacing: 2px;
   }
 
-  a:hover {
-    color: #999 !important;
+  a:hover, a.active {
+    color: #fff !important;
+  }
+
+  a.active {
+    font-weight: normal;
   }
 
   nav {
@@ -195,7 +200,7 @@
       opacity: 0.8;
       transition: opacity .5s ease;
 
-      &:hover {
+      &:hover, a.active {
         opacity: .35;
         transition: opacity .5s ease;
       }
@@ -223,6 +228,20 @@
     }
   }
 
+}
+
+#menu {
+  a, a:visited {
+    color: #ccc !important;
+  }
+
+  a:hover, a.active {
+    color: #fff !important;
+  }
+
+  a.active {
+    font-weight: normal;
+  }
 }
 
 body {

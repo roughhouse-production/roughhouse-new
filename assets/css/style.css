@@ -413,10 +413,14 @@
   height: 2em;
 }
 .main-header a, .main-header a:visited {
-  color: #fff;
+  color: #ccc;
+  letter-spacing: 2px;
 }
-.main-header a:hover {
-  color: #999 !important;
+.main-header a:hover, .main-header a.active {
+  color: #fff !important;
+}
+.main-header a.active {
+  font-weight: normal;
 }
 .main-header nav {
   display: none;
@@ -434,7 +438,7 @@
   opacity: 0.8;
   transition: opacity 0.5s ease;
 }
-.main-header nav a[href="#menu"]:hover {
+.main-header nav a[href="#menu"]:hover, .main-header nav a[href="#menu"] a.active {
   opacity: 0.35;
   transition: opacity 0.5s ease;
 }
@@ -455,6 +459,16 @@
   display: inline-block;
   list-style: none;
   margin-left: 15px;
+}
+
+#menu a, #menu a:visited {
+  color: #ccc !important;
+}
+#menu a:hover, #menu a.active {
+  color: #fff !important;
+}
+#menu a.active {
+  font-weight: normal;
 }
 
 body {
